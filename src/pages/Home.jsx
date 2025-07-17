@@ -30,7 +30,7 @@ function Home() {
     <div className="home-container">
       <section className="video-placeholder">
         <div className="hero-content">
-          <h1>Welcome to My Portfolio</h1>
+          <h1>Welcome to My Portfolio!</h1>
           <p>Showcasing my creative and technical journey.</p>
         </div>
       </section>
