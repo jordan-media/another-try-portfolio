@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+    <title>Jordan Media Portfolio</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <script>
+      (function() {
+        const emailAddress = "coastalifee@icloud.com"; // Your email, repeated for the JS script
+
+        // A simple heuristic to detect if developer tools are open
+        const devtools = /devtool/i;
+        const detector = setInterval(() => {
+          if (devtools.test(console.toString())) {
+            clearInterval(detector); // Stop checking once detected
+
+            // Trigger debugger and log the message
+            debugger; // This will pause execution if devtools are open
+            console.log("%cWelcome, curious developer! You found the hidden message. 🎉", "color: #36454f; font-size: 16px; font-weight: bold; font-family: 'Space Grotesk', sans-serif;");
+            console.log("%cEmail: " + emailAddress, "color: #36454f; font-size: 14px; font-family: 'Space Grotesk', sans-serif;");
+            console.log("Feel free to reach out directly!");
+          }
+        }, 100); // Check every 100 milliseconds
+      })();
+    </script>
+  </body>
+</html>

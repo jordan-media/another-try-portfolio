@@ -1,0 +1,37 @@
+[
+  {
+    "id": "amazon-ads-campaign",
+    "name": "Product Advertisement",
+    "description": "Involved in storyboarding, scriptwriting, filming, scene setup, recording voiceovers, acting, lighting, and video and audio editing. Software used: Adobe Audition, Premiere Pro, After Effects."
+  },
+  {
+    "id": "adobe-automation",
+    "name": "Adobe Illustrator Automation",
+    "description": "Developed custom scripts and automations for Adobe Illustrator to streamline creative workflows, specifically for triangular overlays."
+  },
+  {
+    "id": "ar-experiences",
+    "name": "Augmented Reality Experiences",
+    "description": "Designed and developed an augmented reality experience to showcase a timeline of my career path."
+  },
+  {
+    "id": "wireframing-prototyping",
+    "name": "UX/UI Wireframing & Prototyping",
+    "description": "Conducted user research, created wireframes, and built interactive prototypes for mobile applications, including both academic and personal passion projects."
+  },
+  {
+    "id": "motion-graphics",
+    "name": "Motion Graphics Design",
+    "description": "Produced engaging motion graphics and animated visuals for various media, including promotional videos, explainers, and digital advertisements."
+  },
+  {
+    "id": "myblog",
+    "name": "Blog",
+    "description": "An personal blog where I share insights and observations, providing a unique perspective on the world through my experiences."
+  },
+{
+  "id": "web-development",
+  "name": "Web Development Projects",
+  "description": "Developed and maintained various web applications and websites, focusing on responsive design and user experience."
+}
+]

@@ -1,0 +1,70 @@
+/* src/styles/About.css */
+
+.about-page {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+.about-intro h1 {
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  margin-bottom: 1rem;
+}
+
+.about-intro .quote {
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.about-intro .statement {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  margin-bottom: 1.5rem;
+}
+
+.about-intro .personal {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  margin-bottom: 2rem;
+}
+
+.about-section {
+  margin-top: 3rem;
+}
+
+.about-section h2 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.skills-grid li {
+  background: #f0f0f0;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Optional larger screens polish */
+@media (min-width: 900px) {
+  .about-page {
+    padding: 4rem 2rem;
+  }
+
+  .skills-grid li {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,83 @@
+/* src/components/NavigationGrid.css */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+.navigation-grid-section {
+  width: 100%;
+  background-color: #f8f8f8;
+  color: #36454f;
+  border-bottom: 1px solid #36454f;
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 4vh 0;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.navigation-grid-container {
+  display: grid;
+  grid-template-columns:
+    minmax(240px, 2fr) /* First column: wider */
+    repeat(auto-fit, minmax(160px, 1fr)); /* Remaining columns */
+  gap: 2.5rem;
+  width: 100%;
+}
+
+
+/* Column Styling */
+.grid-column {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.column-title {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid #36454f;
+}
+
+.grid-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.grid-column li {
+  margin-bottom: 0.4em;
+}
+
+.grid-column a {
+  color: #36454f;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.grid-column a:hover {
+  color: #666;
+}
+
+/* Mobile improvements */
+@media (max-width: 600px) {
+  .navigation-grid-container {
+    gap: 1.5rem;
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+
+  .column-title {
+    text-align: center;
+    width: 100%;
+      border-bottom: 1px solid #36454f;
+  padding-bottom: 0.25em;
+  margin-bottom: 0.5em;
+  }
+
+  .grid-column {
+    align-items: center;
+    text-align: center;
+  }
+
+  .grid-column ul {
+    padding-left: 0;
+  }
+}

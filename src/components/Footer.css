@@ -1,0 +1,152 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+.footer-container {
+  width: 100%;
+  background-color: #f8f8f8;
+  color: #36454f;
+  border-top: 1px solid #36454f;
+  padding: 4vh 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.6rem);
+  line-height: 1;
+}
+
+.footer-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.footer-joke,
+.footer-location-combined,
+.footer-mission-statement,
+.footer-copyright {
+  margin: 0;
+  padding-right: 2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.footer-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 2em;
+  margin-left: auto;
+  gap: 1rem;
+}
+
+.footer-icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-joke code {
+  font-size: 0.85em;
+  background: none;
+}
+
+.footer-link {
+  color: #36454f;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #666;
+}
+
+.footer-icon-space {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #36454f;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.footer-icon-space:hover {
+  background-color: rgba(54, 69, 79, 0.1);
+}
+
+.footer-icon-space svg {
+  width: 70%;
+  height: 70%;
+  fill: #36454f;
+}
+
+.footer-copyright {
+  color: #666;
+  font-size: 0.6em;
+  padding-top: .9em;
+}
+
+/* COORD STACK */
+.stacked-coords-container {
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 0.5em;
+  line-height: 0.9em;
+  margin: 0 0.5em;
+  transform: translateY(-8px);
+}
+
+.footer-location-combined {
+  transform: translateY(5px);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .footer-content {
+    text-align: right;
+    align-items: right;
+  }
+
+  .footer-icons {
+    justify-content: center;
+  }
+
+  .footer-location-combined,
+  .footer-mission-statement {
+    white-space: normal;
+  }
+
+  .footer-joke,
+  .footer-location-combined,
+  .footer-mission-statement,
+  .footer-copyright {
+    overflow: visible;
+    text-overflow: unset;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-break {
+    display: block;
+    margin-top: 0.4em;
+  }
+
+  .footer-icons {
+    margin: 0;
+    padding-right: 0;
+    justify-self: center;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .footer-break-container {
+    justify-content: center;
+  }
+
+  .footer-copyright {
+    text-align: center;
+    padding-right: 0;
+  }
+}

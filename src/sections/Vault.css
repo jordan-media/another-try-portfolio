@@ -1,0 +1,76 @@
+.vault-wrapper {
+  width: 100%;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.vault-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  font-size: clamp(2rem, 5vw, 2rem);
+  font-weight: 400;
+  color: #1a1a1a;
+  justify-content: space-between;
+  padding-left: 1em;
+}
+
+.vault-title {
+  margin: 0;
+}
+
+.vault-count {
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  color: #444;
+  font-style: italic;
+  padding-right: 1em;
+}
+
+.vault-row {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
+  align-items: start;
+  border-top: 1px solid #ccc;
+  padding-top: 2rem;
+  text-align: left;
+  padding-bottom: 1rem;
+}
+
+.vault-label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #222;
+  padding-left: 2em;
+}
+
+.vault-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.vault-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.vault-item a {
+  text-decoration: none;
+  color: #222;
+  font-size: 1.05rem;
+  transition: color 0.2s ease;
+}
+
+.vault-item a:hover {
+  color: #666;
+}
+
+.vault-divider {
+  height: 1px;
+  background-color: #ccc;
+  width: 100%;
+  margin: 0.5rem 0;
+}
