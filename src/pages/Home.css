@@ -1,9 +1,8 @@
 /* src/components/Home.css */
 
 .home-container {
-  width: 100%;
-  overflow-x: hidden;
-  background-color: #f8f8f8;
+  background-color: var(--primary-color);
+  color: var(--text-color);
 }
 
 /* HERO SECTION */
@@ -11,7 +10,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: #5a6f8b;
+  background-color: var(--secondary-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,7 +32,7 @@
 /* CONTENT SECTION */
 .content-section {
   width: 100%;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   /* padding: 5vh 0; */
   text-align: center;
 }
@@ -58,7 +57,7 @@
 }
 
 .project-link:hover {
-  color: #666;
+  color: var(--link-hover-color);
 }
 
 /* Loading text */

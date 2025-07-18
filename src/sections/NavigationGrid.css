@@ -3,9 +3,10 @@
 
 .navigation-grid-section {
   width: 100%;
-  background-color: #f8f8f8;
+  background-color: var(--primary-color);
   color: #36454f;
-  border-bottom: 1px solid #36454f;
+  border-bottom: 1px solid var(--secondary-color);
+  border-top: 1px solid var(--secondary-color);
   font-family: 'Space Grotesk', sans-serif;
   padding: 4vh 0;
   font-size: clamp(1rem, 2vw, 1.2rem);

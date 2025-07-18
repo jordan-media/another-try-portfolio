@@ -1,135 +1,159 @@
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #18171b;
+  --text-color: #ffffff;
+  --link-hover-color: #e0e0e0;
+}
+
 .value-section {
-width: 100%;
-padding: 6vh 0;
-background-color: #f8f8f8;
-text-align: left;
-font-family: 'Space Grotesk', sans-serif;
+  width: 100%;
+  padding: 6vh 0;
+  background-color: var(--primary-color);
+  text-align: left;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 /* Main wrapper for "Who are you?" section */
 .identity-wrapper {
-position: relative;
-padding: 2rem 0;
-text-align: center;
-z-index: 1;
+  position: relative;
+  padding: 2rem 0;
+  text-align: center;
+  z-index: 1;
 }
 
 /* Header layout for background text + animated subtext */
 .identity-header {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-display: flex;
-align-items: flex-end;
-justify-content: space-between;
-flex-wrap: nowrap;
-gap: 2rem;
-padding: 2em 1em 0;
-z-index: 0;
-pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  padding: 2em 1em 0;
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* Faded "Who are you?" background text */
 .identity-bg-text {
-font-size: clamp(3rem, 10vw, 6rem);
-font-weight: 800;
-color: #1a1a1a;
-opacity: 0.05;
-white-space: nowrap;
-margin: 0;
-line-height: 1;
-z-index: -1;
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 800;
+  color: #1a1a1a;
+  opacity: 0.05;
+  white-space: nowrap;
+  margin: 0;
+  line-height: 1;
+  z-index: -1;
 }
 
 /* Wrapper for right-aligned animated text (now separated into ValueSubtext.css) */
 .identity-subtext-wrapper {
-display: flex;
-flex-direction: column;
-align-items: flex-end;
-font-size: clamp(1.1rem, 2.5vw, 2rem);
-font-weight: 400;
-color: #1a1a1a;
-opacity: 1;
-text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: clamp(1.1rem, 2.5vw, 2rem);
+  font-weight: 400;
+  color: #1a1a1a;
+  opacity: 1;
+  text-align: right;
 }
 
 /* Button group */
 .value-buttons {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 1rem;
-margin-bottom: 2.5rem;
-position: relative;
-z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 2;
 }
 
 .value-buttons button {
-background: transparent;
-border: 1px solid #36454f;
-color: #36454f;
-font-size: clamp(0.85rem, 2.5vw, 1.1rem);
-padding: 0.6em 1.2em;
-border-radius: 20px;
-cursor: pointer;
-transition: background-color 0.3s ease, color 0.3s ease;
+  --b: 2px;     /* border thickness */
+  --s: 0.7em;   /* corner size */
+  --color: #36454f;
+
+  padding: calc(0.6em + var(--s)) calc(1.2em + var(--s));
+  font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+  font-weight: 500;
+
+  color: var(--color);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b), #00000000 90deg, var(--color) 0)
+    var(--s) var(--s) / calc(100% - var(--b) - 2 * var(--s)) calc(100% - var(--b) - 2 * var(--s));
+
+  border: none;
+  outline: var(--b) solid transparent;
+  outline-offset: 0.6em;
+  transition: 0.3s linear, color 0s, background-color 0s;
+
+  border-radius: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
 }
 
-.value-buttons button:hover {
-background-color: #36454f;
-color: #fff;
+.value-buttons button:hover,
+.value-buttons button:focus-visible {
+  --s: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+}
+
+.value-buttons button:active {
+  background: var(--color);
+  color: #fff;
 }
 
 .value-buttons .default-button {
-font-weight: 600;
-font-size: clamp(0.9rem, 3vw, 1.2rem);
-padding: 0.7em 1.5em;
-border-width: 2px;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
+  padding: calc(0.7em + var(--s)) calc(1.5em + var(--s));
+  border-width: 2px;
 }
 
 /* Ensures consistent layout for button row */
 .identity-button-row {
-position: relative;
-z-index: 2;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 1rem;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 /* Main content blur effect */
 .value-content {
-max-width: 800px;
-margin: 0 auto;
-transition: filter 0.4s ease, opacity 0.4s ease;
-filter: blur(2px);
-opacity: 0.6;
+  max-width: 800px;
+  margin: 0 auto;
+  transition: filter 0.4s ease, opacity 0.4s ease;
+  filter: blur(2px);
+  opacity: 0.6;
 }
 
 .value-content.focused {
-filter: none;
-opacity: 1;
+  filter: none;
+  opacity: 1;
 }
-
 
 /* Main paragraph text */
 .value-text {
-font-size: clamp(1rem, 2.5vw, 1.3rem);
-margin-bottom: 1.2rem;
-color: #36454f;
-line-height: 1.5;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  margin-bottom: 1.2rem;
+  color: var(--secondary-color);
+  line-height: 1.5;
 }
 
-
 .code-block {
-  /* background-color: #fefefe; */
   color: #1a1a1a;
   font-family: 'Fira Code', 'Courier New', monospace;
   font-size: 0.95rem;
   padding: 1.5em;
-  /* border-radius: 6px; */
-  /* border: 1px solid #ccc; */
   overflow-x: auto;
   line-height: 1.6;
   white-space: pre-wrap;
@@ -138,15 +162,15 @@ line-height: 1.5;
 
 /* Light theme syntax highlighting */
 .keyword {
-  color: #0b61a4; /* strong navy blue */
+  color: #0b61a4;
 }
 
 .function {
-  color: #9d5c00; /* dark orange/gold */
+  color: #9d5c00;
 }
 
 .number {
-  color: #007245; /* dark teal/green */
+  color: #007245;
 }
 
 .comment {
@@ -154,26 +178,23 @@ line-height: 1.5;
   font-style: italic;
 }
 
-
-
-
 /* ========== MOBILE STYLES ========== */
 @media (max-width: 600px) {
-.value-buttons {
-flex-direction: column;
-gap: 0.75rem;
-}
+  .value-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
 
-.identity-header {
-flex-direction: column;
-align-items: center;
-gap: 1rem;
-padding: 2em 0 0;
-}
+  .identity-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2em 0 0;
+  }
 
-.identity-subtext-wrapper {
-align-items: center;
-text-align: center;
-margin-bottom: 0;
-}
+  .identity-subtext-wrapper {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0;
+  }
 }
