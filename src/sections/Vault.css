@@ -1,6 +1,6 @@
 .vault-wrapper {
   width: 100%;
-  background-color: #f9f9f9;
+  background-color: var(--primary-color);
   display: flex;
   flex-direction: column;
   font-family: 'Space Grotesk', sans-serif;

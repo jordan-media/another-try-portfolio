@@ -10,11 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@clerk/clerk-react": "^5.35.3",
     "@gsap/react": "^2.1.2",
     "gsap": "^3.13.0",
     "react": "^19.1.0",
+    "react-colorful": "^5.6.1",
     "react-dom": "^19.1.0",
-    "react-router-dom": "^7.6.3"
+    "react-router-dom": "^7.6.3",
+    "react-sketch-canvas": "^6.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",

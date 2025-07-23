@@ -30,9 +30,9 @@ body {
 }
 
 :root {
-  --primary-color: #f7f7f7;
+  --primary-color: #ffffff;
   --secondary-color: #18171b;
-  --text-color: #ffffff;
+  --text-color: #000000;
   --link-hover-color: #e0e0e0;
 }
 

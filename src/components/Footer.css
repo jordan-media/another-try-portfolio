@@ -3,9 +3,9 @@
 
 .footer-container {
   width: 100%;
-  background-color: #f8f8f8;
+  background-color: var(--primary-color);
   color: #36454f;
-  border-top: 1px solid #36454f;
+  border-top: 1px solid var(--secondary-color);
   padding: 4vh 0;
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(1rem, 2.5vw, 1.6rem);

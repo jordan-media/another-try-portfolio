@@ -1,0 +1,91 @@
+/* src/components/SignWall.css */
+
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #18171b;
+  --text-color: #18171b;
+  --link-hover-color: #e0e0e0;
+}
+
+.signwall-container {
+  padding: 2rem;
+  max-width: 100%;
+  background-color: var(--primary-color);
+  border-top: 1px solid var(--secondary-color);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.signwall-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.signwall-canvas {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  cursor: crosshair;
+}
+
+.signwall-controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Button-89 styling, adapted to match your light theme */
+.signwall-controls button {
+  --b: 2px;              /* border thickness */
+  --s: 0.7em;           /* corner size */
+  --color: var(--secondary-color);
+
+  padding: calc(0.6em + var(--s)) calc(1.2em + var(--s));
+  font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+  font-weight: 500;
+
+  color: var(--color);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0)
+    var(--s) var(--s) / calc(100% - var(--b) - 2 * var(--s)) calc(100% - var(--b) - 2 * var(--s));
+
+  border: none;
+  outline: var(--b) solid transparent;
+  outline-offset: 0.6em;
+  transition: 0.3s linear, color 0s, background-color 0s;
+
+  border-radius: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.signwall-controls button:hover,
+.signwall-controls button:focus-visible {
+  --s: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+}
+
+.signwall-controls button:active {
+  background-color: var(--color);
+  color: var(--primary-color);
+}
+
+.user-saved {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.user-saved img {
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}

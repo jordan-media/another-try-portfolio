@@ -27,7 +27,7 @@ const valueStatements = {
   <code>
     <span className="comment">// Tech moves fast — most people just .join() and hope for the best</span>{'\n'}
     <span className="keyword">const</span> industry = <span className="string">"tech"</span>;{'\n'}
-    <span className="keyword">const</span> newHires = Array(<span className="number">100</span>).fill({`{`} path: <span className="string">"typical"</span>, stressTested: <span className="keyword">false</span> });{'\n\n'}
+    <span className="keyword">const</span> newHires = Array(<span className="number">100</span>).fill({`{`} path: <span className="string">"typical"</span>, stressTested: <span className="keyword">false</span> {`}`});{'\n\n'}
     <span className="keyword">const</span> me = {'{'}{'\n'}
     &nbsp;&nbsp;path: <span className="string">"nonTraditional"</span>,{'\n'}
     &nbsp;&nbsp;industries: [<span className="string">"construction"</span>, <span className="string">"creative"</span>],{'\n'}
