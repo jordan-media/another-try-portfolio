@@ -38,7 +38,7 @@ const About = () => {
       <div className="about-section">
         <h2>Trajectory</h2>
         <p>
-          BCIT New Media & Web Development graduate – Spring 2026<br />
+          BCIT New Media & Web Development graduate – Spring 2026!<br />
           Focused on user experience, motion graphics, development, and storytelling – with sprinkles of animation and audio/video editing.
         </p>
       </div>
